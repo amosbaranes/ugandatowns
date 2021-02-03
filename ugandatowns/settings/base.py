@@ -89,10 +89,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+STATIC_ROOT = os.path.join(DATA_DIR, '../static')
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'ugandatowns', 'static'),
+    os.path.join(BASE_DIR, 'ugandatowns', '../static'),
 )
 SITE_ID = 1
 
@@ -100,7 +100,7 @@ SITE_ID = 1
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'ugandatowns', 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'ugandatowns', '../templates'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -217,29 +217,6 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
-# DATABASES = {
-#     'default': {
-#         'CONN_MAX_AGE': 0,
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'HOST': 'localhost',
-#         'NAME': 'project.db',
-#         'PASSWORD': '',
-#         'PORT': '',
-#         'USER': ''
-#     }
-# }
-
-DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'localhost',
-        'NAME': 'ugandatowns',
-        'PASSWORD': 'ugandatowns',
-        'PORT': '',
-        'USER': 'ugandatowns'
-    }
-}
 
 # 'NAME': 'ugandatowns',
 
